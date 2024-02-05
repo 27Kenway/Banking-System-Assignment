@@ -4,7 +4,7 @@
 # if the total value is exceeding 70000 then give a discount of 1000
 # to the console print message :"your Ordered product is :: Your Bill is::{}"
 
-Ans 
+
             Console.WriteLine("Enter your Productname::");
             string pdtName = Console.ReadLine();
             Console.WriteLine("Enter your productPrise");
@@ -48,7 +48,7 @@ Console.WriteLine($"Hello, {person.Name}. You are {person.Age} years old.");
 # Which type of variable should he create. Illustrate with an example.
 
  Ans 
- If Daniel wants to collect feedback from his customers on the quality of their companyís service, he should create a dynamic type variable. 
+ If Daniel wants to collect feedback from his customers on the quality of their company‚Äôs service, he should create a dynamic type variable. 
  A dynamic type variable can hold any type of object, and its type is determined at runtime. 
  This means that Daniel can add or remove properties to the variable as he decides the parameters that contribute to the feedback.
  For Example:
@@ -66,6 +66,6 @@ Console.WriteLine($"Comments: {feedback.Comments}");
 #As a member of a team that is developing toys for JoyToys, Inc., 
 you have been assigned the task of creating a bike module that accepts and displays bike details. 
 Declare the Bike class and its member functions. The member function that accepts bike details should display
-the message ìAccepting Bike Detailsî. Similarly, the member function to display bike details on the screen 
-should display the message ìDisplaying Bike Detailsî
+the message ‚ÄúAccepting Bike Details‚Äù. Similarly, the member function to display bike details on the screen 
+should display the message ‚ÄúDisplaying Bike Details‚Äù
 
