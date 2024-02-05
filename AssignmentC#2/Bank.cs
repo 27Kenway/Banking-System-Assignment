@@ -41,105 +41,105 @@ namespace AssignmentC_2
                     CurrentAccount();
                 • deposit(amount: float): Deposit the specified amount into the account.*/
 
-        //    Console.WriteLine("Welcome to the Bank System!");
+            Console.WriteLine("Welcome to the Bank System!");
 
-        //    BankAccount acc = null;
+            BankAccount acc = null;
 
-        //    Console.WriteLine("Choose an account type:");
-        //    Console.WriteLine("1. Savings Account");
-        //    Console.WriteLine("2. Current Account");
+            Console.WriteLine("Choose an account type:");
+            Console.WriteLine("1. Savings Account");
+            Console.WriteLine("2. Current Account");
 
-        //    int accountTypeChoice = int.Parse(Console.ReadLine());
+            int accountTypeChoice = int.Parse(Console.ReadLine());
 
-        //    switch (accountTypeChoice)
-        //    {
-        //        case 1:
-        //            acc = CreateAccount("Savings Account");
-        //            break;
-        //        case 2:
-        //            acc = CreateAccount("Current Account");
-        //            break;
-        //        default:
-        //            Console.WriteLine("Invalid choice. Exiting...");
-        //            return;
-        //    }
+            switch (accountTypeChoice)
+            {
+                case 1:
+                    acc = CreateAccount("Savings Account");
+                    break;
+                case 2:
+                    acc = CreateAccount("Current Account");
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice. Exiting...");
+                    return;
+            }
 
-        //    while (true)
-        //    {
-        //        Console.WriteLine("\nChoose an operation:");
-        //        Console.WriteLine("1. Deposit");
-        //        Console.WriteLine("2. Withdraw");
-        //        Console.WriteLine("3. Display Account Information");
-        //        Console.WriteLine("4. Calculate Interest (for Savings Account)");
-        //        Console.WriteLine("5. Exit");
+            while (true)
+            {
+                Console.WriteLine("\nChoose an operation:");
+                Console.WriteLine("1. Deposit");
+                Console.WriteLine("2. Withdraw");
+                Console.WriteLine("3. Display Account Information");
+                Console.WriteLine("4. Calculate Interest (for Savings Account)");
+                Console.WriteLine("5. Exit");
 
-        //        int choice = int.Parse(Console.ReadLine());
+                int choice = int.Parse(Console.ReadLine());
 
-        //        switch (choice)
-        //        {
-        //            case 1:
-        //                Console.Write("Enter the deposit amount: ");
-        //                decimal depositAmount = decimal.Parse(Console.ReadLine());
-        //                acc.Deposit(depositAmount);
-        //                break;
-        //            case 2:
-        //                Console.Write("Enter the withdrawal amount: ");
-        //                decimal withdrawalAmount = decimal.Parse(Console.ReadLine());
-        //                acc.Withdraw(withdrawalAmount);
-        //                break;
-        //            case 3:
-        //                acc.DisplayAccountInfo();
-        //                break;
-        //            case 4:
-        //                if (acc is SavingsAccount)
-        //                {
-        //                    ((SavingsAccount)acc).CalculateInterest();
-        //                }
-        //                else
-        //                {
-        //                    Console.WriteLine("Interest calculation is only applicable for Savings Account.");
-        //                }
-        //                break;
-        //            case 5:
-        //                Console.WriteLine("Exiting...");
-        //                return;
-        //            default:
-        //                Console.WriteLine("Invalid choice. Please choose a valid option.");
-        //                break;
-        //        }
-        //    }
-        //}
+                switch (choice)
+                {
+                    case 1:
+                        Console.Write("Enter the deposit amount: ");
+                        decimal depositAmount = decimal.Parse(Console.ReadLine());
+                        acc.Deposit(depositAmount);
+                        break;
+                    case 2:
+                        Console.Write("Enter the withdrawal amount: ");
+                        decimal withdrawalAmount = decimal.Parse(Console.ReadLine());
+                        acc.Withdraw(withdrawalAmount);
+                        break;
+                    case 3:
+                        acc.DisplayAccountInfo();
+                        break;
+                    case 4:
+                        if (acc is SavingsAccount)
+                        {
+                            ((SavingsAccount)acc).CalculateInterest();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Interest calculation is only applicable for Savings Account.");
+                        }
+                        break;
+                    case 5:
+                        Console.WriteLine("Exiting...");
+                        return;
+                    default:
+                        Console.WriteLine("Invalid choice. Please choose a valid option.");
+                        break;
+                }
+            }
+        }
 
-        //static BankAccount CreateAccount(string accountType)
-        //{
-        //    Console.WriteLine($"Creating a new {accountType}");
+        static BankAccount CreateAccount(string accountType)
+        {
+            Console.WriteLine($"Creating a new {accountType}");
 
-        //    Console.Write("Enter Account Number: ");
-        //    string accountNumber = Console.ReadLine();
+            Console.Write("Enter Account Number: ");
+            string accountNumber = Console.ReadLine();
 
-        //    Console.Write("Enter Customer Name: ");
-        //    string customerName = Console.ReadLine();
+            Console.Write("Enter Customer Name: ");
+            string customerName = Console.ReadLine();
 
-        //    Console.Write("Enter Initial Balance: ");
-        //    decimal initialBalance = decimal.Parse(Console.ReadLine());
+            Console.Write("Enter Initial Balance: ");
+            decimal initialBalance = decimal.Parse(Console.ReadLine());
 
-        //    if (accountType.Equals("Savings Account", StringComparison.OrdinalIgnoreCase))
-        //    {
-                
-        //        return new SavingsAccount(accountNumber, customerName, initialBalance);
-        //    }
-        //    else if (accountType.Equals("Current Account", StringComparison.OrdinalIgnoreCase))
-        //    {
-        //        return new CurrentAccount(accountNumber, customerName, initialBalance);
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Invalid account type. Exiting...");
-        //        return null;
-        //    }
-        
+            if (accountType.Equals("Savings Account", StringComparison.OrdinalIgnoreCase))
+            {
 
-        
-    }
+                return new SavingsAccount(accountNumber, customerName, initialBalance);
+            }
+            else if (accountType.Equals("Current Account", StringComparison.OrdinalIgnoreCase))
+            {
+                return new CurrentAccount(accountNumber, customerName, initialBalance);
+            }
+            else
+            {
+                Console.WriteLine("Invalid account type. Exiting...");
+                return null;
+            }
+
+
+
+        }
     }
 }
