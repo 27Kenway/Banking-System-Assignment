@@ -347,23 +347,23 @@ namespace Assignment
                 • withdraw(amount: double) : Withdraw the specified amount from the account.withdraw
                     amount only if there is sufficient fund else display insufficient balance.*/
 
-            Account account = new Account(123456, "Savings", 1000.0);
+            //Account account = new Account(123456, "Savings", 1000.0);
 
-            // Deposit using different data types
-            account.Deposit(500.0);
-            account.Deposit(200);
-            account.Deposit(100.75);
+            //// Deposit using different data types
+            //account.Deposit(500.0);
+            //account.Deposit(200);
+            //account.Deposit(100.75);
 
 
-            // Withdraw using different data types
-            account.Withdrawal(300.0);
-            account.Withdrawal(150);
-            account.Withdrawal(200.50);
+            //// Withdraw using different data types
+            //account.Withdrawal(300.0);
+            //account.Withdrawal(150);
+            //account.Withdrawal(200.50);
 
-            account.Calculate_Interest();
-            // Print the final account information
+            //account.Calculate_Interest();
+            //// Print the final account information
 
-            account.DisplayAccountDetails();
+            //account.DisplayAccountDetails();
 
             /*2.Create Subclasses for Specific Account Types
     • Create subclasses for specific account types(e.g., `SavingsAccount`, `CurrentAccount`)
